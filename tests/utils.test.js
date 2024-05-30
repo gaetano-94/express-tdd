@@ -41,3 +41,6 @@ test('createSlug dovrebbe lanciare un errore in caso di titolo non presente o fo
 });
 
 // createSlug dovrebbe lanciare un errore se manca l'array dei post
+test("createSlug dovrebbe lanciare un errore se manca l'array dei post", () => {
+  expect(() => createSlug('My First Post', null)).toThrow('Invalid posts list');
+});

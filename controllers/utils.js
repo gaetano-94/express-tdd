@@ -2,6 +2,9 @@ const createSlug = (title, posts) => {
   if (!title || typeof title !== 'string') {
     throw new Error('Invalid title');
   }
+  if (!Array.isArray(posts)) {
+    throw new Error('Invalid posts list');
+  }
 
   let slug = title.toLowerCase().replace(/ /g, '-');
   if (posts.includes(slug)) {
