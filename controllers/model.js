@@ -4,6 +4,7 @@ class Model {
   }
 
   read() {}
+  add() {}
 }
 
 module.exports = Model;
