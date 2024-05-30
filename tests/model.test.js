@@ -21,6 +21,10 @@ test("L'istanza di model dovrebbe richiedere il nome del file json da usare in f
 });
 
 // L'istanza di model dovrebbe avere il metodo read
+test("L'istanza di model dovrebbe avere il metodo read", () => {
+  const model = new Model('data.json');
+  expect(typeof model.read).toBe('function');
+});
 
 // L'istanza di model dovrebbe avere il metodo add
 
