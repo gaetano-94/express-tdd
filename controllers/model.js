@@ -8,7 +8,10 @@ class Model {
     return this.data;
   }
 
-  add() {}
+  add(item) {
+    this.data.push(item);
+    return this.data;
+  }
 }
 
 module.exports = Model;

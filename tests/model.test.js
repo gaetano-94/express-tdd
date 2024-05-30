@@ -40,3 +40,10 @@ test('read dovrebbe ritornare un array', () => {
 });
 
 // add dovrebbe aggiungere un elemento all’array dei dati e ritornare tutta la lista
+test("add dovrebbe aggiungere un elemento all'array dei dati e ritornare tutta la lista", () => {
+  const model = new Model('data.json');
+  model.add({ id: 1, name: 'Test' });
+  const data = model.read();
+  expect(data.length).toBe(1);
+  expect(data[0]).toEqual({ id: 1, name: 'Test' });
+});
