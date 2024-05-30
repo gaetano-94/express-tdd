@@ -15,6 +15,10 @@ test('Model dovrebbe essere una classe', () => {
 });
 
 // L'istanza di model dovrebbe richiedere il nome del file json da usare in fase di creazione dell'istanza
+test("L'istanza di model dovrebbe richiedere il nome del file json da usare in fase di creazione dell'istanza", () => {
+  const model = new Model('data.json');
+  expect(model.fileName).toBe('data.json');
+});
 
 // L'istanza di model dovrebbe avere il metodo read
 
