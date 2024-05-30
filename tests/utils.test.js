@@ -35,5 +35,9 @@ test('createSlug dovrebbe incrementare di 1 lo slug quando esiste già', () => {
 });
 
 // createSlug dovrebbe lanciare un errore in caso di titolo non presente o formato errato
+test('createSlug dovrebbe lanciare un errore in caso di titolo non presente o formato errato', () => {
+  expect(() => createSlug('', [])).toThrow('Invalid title');
+  expect(() => createSlug(null, [])).toThrow('Invalid title');
+});
 
 // createSlug dovrebbe lanciare un errore se manca l'array dei post
