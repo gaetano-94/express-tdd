@@ -21,6 +21,11 @@ test('createSlug dovrebbe ritornare una stringa in lowercase', () => {
 });
 
 // createSlug dovrebbe ritornare una stringa con gli spazi sostituiti da -
+test('createSlug dovrebbe ritornare una stringa con gli spazi sostituiti da -', () => {
+  const result = createSlug('My First Post', []);
+  expect(result.includes(' ')).toBe(false);
+  expect(result.includes('-')).toBe(true);
+});
 
 // createSlug dovrebbe incrementare di 1 lo slug quando esiste già
 
