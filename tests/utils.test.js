@@ -28,6 +28,11 @@ test('createSlug dovrebbe ritornare una stringa con gli spazi sostituiti da -', 
 });
 
 // createSlug dovrebbe incrementare di 1 lo slug quando esiste già
+test('createSlug dovrebbe incrementare di 1 lo slug quando esiste già', () => {
+  const posts = ['my-first-post'];
+  const result = createSlug('My First Post', posts);
+  expect(result).toBe('my-first-post-1');
+});
 
 // createSlug dovrebbe lanciare un errore in caso di titolo non presente o formato errato
 
