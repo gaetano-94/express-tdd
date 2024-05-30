@@ -1,9 +1,13 @@
 class Model {
   constructor(fileName) {
     this.fileName = fileName;
+    this.data = [];
   }
 
-  read() {}
+  read() {
+    return this.data;
+  }
+
   add() {}
 }
 

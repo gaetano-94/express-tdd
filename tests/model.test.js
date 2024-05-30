@@ -32,6 +32,11 @@ test("L'istanza di model dovrebbe avere il metodo add", () => {
   expect(typeof model.add).toBe('function');
 });
 
-// ead dovrebbe ritornare un array
+// read dovrebbe ritornare un array
+test('read dovrebbe ritornare un array', () => {
+  const model = new Model('data.json');
+  const data = model.read();
+  expect(Array.isArray(data)).toBe(true);
+});
 
 // add dovrebbe aggiungere un elemento all’array dei dati e ritornare tutta la lista
