@@ -1,5 +1,5 @@
 const createSlug = (title, posts) => {
-  return '';
+  return title.toLowerCase();
 };
 
 module.exports = { createSlug };
